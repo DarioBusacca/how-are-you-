@@ -13,7 +13,7 @@ import types
 import collections
 import warnings
 
-import func as F
+from . import func as F
 
 __all__ = ["Compose", "ToTensor", "ToPILImage", "Normalize", "Resize", "Scale", "CenterCrop", "Pad",
            "Lambda", "RandomCrop", "RandomHorizontalFlip", "RandomVerticalFlip", "RandomResizedCrop",

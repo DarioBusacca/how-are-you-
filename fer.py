@@ -18,7 +18,7 @@ class FER2013(data.Dataset):
     def __init__(self, split = 'Training', transform = None):
         self.transform = transform
         self.split = split  #training set or test set
-        self.data = h5py.File('.data/data.h5', 'r', driver = 'core')
+        self.data = h5py.File('./data/data.h5', 'r', driver = 'core')
         
         # load numpy arrays
         if self.split == 'Training':
