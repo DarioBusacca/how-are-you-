@@ -24,20 +24,20 @@ class FER2013(data.Dataset):
         if self.split == 'Training':
             self.train_data = self.data['Training_pixel']
             self.train_label = self.data['Training_label']
-            self.traina_data = np.asarray(self.train_data)
-            self.train_data = self.train_data.reshape(28709, 48, 48)
+            self.train_data = np.asarray(self.train_data)
+            self.train_data = self.train_data.reshape((28709, 48, 48))
             
         elif self.split == 'PublicTest':
             self.PublicTest_data = self.data['PublicTest_pixel']
             self.PublicTest_label = self.data['PublicTest_label']
             self.PublicTest_data = np.asarray(self.PublicTest_data)
-            self.PublicTest_data = self.PublicTest_data.reshape(3589, 48, 48)
+            self.PublicTest_data = self.PublicTest_data.reshape((3589, 48, 48))
         
         elif self.split == 'PrivateTest':
             self.PrivateTest_data = self.data['PrivateTest_pixel']
             self.PrivateTest_label = self.data['PrivateTest_label']
             self.PrivateTest_data = np.asarray(self.PrivateTest_data)
-            self.PrivateTest_data = self.PrivateTest_data.reshape(3589, 48, 48)
+            self.PrivateTest_data = self.PrivateTest_data.reshape((3589, 48, 48))
         
     def __getitem__(self, index):
         """
