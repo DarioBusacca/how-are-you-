@@ -21,7 +21,7 @@ from models import *
 parser = argparse.ArgumentParser(description='Pytorch FER2013 CNN Training')
 parser.add_argument('--model', type=str, default='VGG19', help='CNN architecture')
 parser.add_argument('--dataset', type=str, default='FER2013', help='CNN architecture')
-parser.add_argument('--bs', default=32, type=int, help='learning rate')
+parser.add_argument('--bs', default=8, type=int, help='learning rate')
 parser.add_argument('--lr', default=0.01, type=float, help='learning rate')
 parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
 opt = parser.parse_args()
@@ -38,7 +38,7 @@ learning_rate_decay_every = 5
 learning_rate_decay_rate = 0.9
 
 cut_size = 44
-total_epoch = 250
+total_epoch = 12
 
 path = os.path.join(opt.dataset + '_' + opt.model)
 

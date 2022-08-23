@@ -64,7 +64,7 @@ def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion Matrix'
 class_names = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
 
     # model
-net = VGG('VGG19')
+net = VGG('VGG16')
 path = os.path.join(opt.dataset + '_' + opt.model)
 checkpoint = torch.load(os.path.join(path, opt.split + '_model.t7'))
 
@@ -72,7 +72,7 @@ net.load_state_dict(checkpoint['net'])
 net.cuda()
 net.eval()
 Testset = FER2013(split = opt.split, transform = transform_test)
-Testloader = torch.utils.data.DataLoader(Testset, batch_size=64, shuffle=False, num_workers=0)
+Testloader = torch.utils.data.DataLoader(Testset, batch_size=8, shuffle=False, num_workers=0)
 correct = 0
 total = 0
 all_target = []
