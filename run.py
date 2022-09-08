@@ -66,7 +66,7 @@ plt.subplots_adjust(left = 0.05, bottom=0.2, right=0.95, top=0.9, hspace=0.02, w
 plt.subplot(1, 3, 2)
 ind = 0.1 + 0.6 * np.arange(len(class_names))   # the x location for the groups
 width = 0.4     # width of the bars: can also be len(x) sequence
-color_list = ['red','orangered','darkorange','limegreen','darkgreen','royalblue','navy']
+color_list = ['red','darkgreen','royalblue','gold','navy','orangered','gray']
 
 for i in range(len(class_names)):
     plt.bar(ind[i], score.data.cpu().numpy()[i], color = color_list[i])

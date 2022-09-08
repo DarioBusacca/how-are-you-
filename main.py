@@ -38,7 +38,7 @@ learning_rate_decay_every = 5
 learning_rate_decay_rate = 0.9
 
 cut_size = 44
-total_epoch = 12
+total_epoch = 16
 
 path = os.path.join(opt.dataset + '_' + opt.model)
 
@@ -154,7 +154,7 @@ def PublicTest(epoch):
     
     # Save checkpoint
     PublicTest_acc = 100.*correct/total
-    if PublicTest_acc > best_public:
+    if PublicTest_acc >= best_public:
         print('Saving...')
         print("Best public test accuracy: %0.3f" % PublicTest_acc)
         state = {
@@ -201,7 +201,7 @@ def PrivateTest(epoch):
         
     # save checkpoint
     PrivateTest_acc = 100.*correct/total
-    if PrivateTest_acc > best_private:
+    if PrivateTest_acc >= best_private:
         print("Saving...")
         print("Best private test accuracy: %0.3f" % PrivateTest_acc)
         state = {

@@ -87,7 +87,6 @@ for batch_idx, (inputs, targets) in enumerate(Testloader):
     _, predicted = torch.max(outputs_avg.data, 1)
     
     total += targets.size(0)
-    correct += targets.size(0)
     correct += predicted.eq(targets.data).cpu().sum()
     if batch_idx == 0:
         all_predicted = predicted
@@ -96,7 +95,7 @@ for batch_idx, (inputs, targets) in enumerate(Testloader):
         all_predicted = torch.cat((all_predicted, predicted), 0)
         all_targets = torch.cat((all_targets, targets), 0)
         
-acc = 100. * correct / total
+acc = 100.*correct/total
 print("accuracy: %0.3f" % acc)
 
 # Compute confusion matrix
@@ -105,6 +104,6 @@ np.set_printoptions(precision = 2)
 
 # plot normalized confusion matrix
 plt.figure(figsize = (10, 8))
-plot_confusion_matrix(matrix, classes = class_names, normalize = True, title = opt.split + 'Confusion matrix (Accuracy %0.3f%%' % acc)
+plot_confusion_matrix(matrix, classes = class_names, normalize = True, title = opt.split + 'Confusion matrix (Accuracy %0.3f%%)' % acc)
 plt.savefig(os.path.join(path, opt.split + '_cm.png'))
 plt.close()
