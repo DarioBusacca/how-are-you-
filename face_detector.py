@@ -76,13 +76,16 @@ def emotionDetection(imageFile):
 # Load the cascade  
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')  
   
-# To capture video from existing video.   
-cap = cv2.VideoCapture('video/alessia.mp4')
-getFirstFrame('video/alessia.mp4')
-getLastFrame('video/alessia.mp4')
+# To capture video from existing video.
+#INSERIRE NOME VIDEO QUI
+cap = cv2.VideoCapture('video/NOMEFILE.mp4')
+getFirstFrame('video/NOMEFILE.mp4')
+getLastFrame('video/NOMEFILE.mp4')
 
-print(emotionDetection('first_frame.jpg'))
-print(emotionDetection('last_frame.jpg'))
+first_emotion = emotionDetection('first_frame.jpg')
+last_emotion = emotionDetection('last_frame.jpg')
+print(first_emotion)
+print(last_emotion)
 
 if(cap.isOpened() == False):
     print("Error opening video for stream")
@@ -91,7 +94,6 @@ while(cap.isOpened()):
     # Read the frame        
     _, img = cap.read()
     
-
     # Convert to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
   
@@ -101,6 +103,7 @@ while(cap.isOpened()):
     # Draw the rectangle around each face
     for (x, y, w, h) in faces:
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+        cv2.putText(img, (first_emotion+'===>'+ last_emotion), (int(x+(w/4)), y+h+40), cv2.FONT_HERSHEY_TRIPLEX, 1, (9, 255, 0), 4)
   
     # Display
     cv2.imshow('Video', img)
