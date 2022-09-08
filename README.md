@@ -4,6 +4,14 @@
 Questo programma è una implementazione pytorch basata su una CNN che riconosce le emozioni da una foto o da un video. 
 Il file _run.py_ implementa il riconoscimento tramite una foto, mentre _face_detector.py_ quello tramite video.
 
+## Dependencies
+ - Python 2.7 o successive
+ - Pytorch 0.2.0 o successive
+ - h5py
+ - sklearn
+ - matplotlib
+ - opencv
+
 ## run.py
 ---
 
