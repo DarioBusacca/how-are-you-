@@ -46,6 +46,14 @@ Per avviare il riconoscimento tramite foto, inserire un'immagine nella cartella 
 
 Il programma restituirà in output un file png dentro la cartella **images/results** con il risultato desiderato.
 
+## Riconoscimento tramite video
+Per avviare il riconoscimento tramite video, inserire il video nella cartella **video**, e modificare il file _face_detector.py_ nelle righe 81, 82 e 83, inserendo il nome del file al posto della dicitura NOMEFILE (il video deve necessariamente essere in mp4).
+> python face_detector.py
 
+Il programma farà partire il video, mostrando un rettangolo attorno alla faccia del soggetto inquadrato e l'evoluzione delle emozioni da quella iniziale a quella finale.
+
+---
+
+__L'idea di questa seconda parte del progetto è quella di riconoscere l'evoluzione delle emozioni da una live foto fatta con iPhone. Il video in questione infatti deve essere breve, più o meno il tempo che si impiega per scattarsi una foto tramite la fotocamera interna. Un consiglio è quello di salvare una live foto come video tramite il proprio iPhone (si può fare direttamente dalla galleria del cellulare), e di inserirla nella cartella del programma in formato mp4.__
 
 
