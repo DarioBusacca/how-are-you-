@@ -35,9 +35,9 @@ Il file da eseguire per fare il preprocessamento e iniziare il training dei mode
 > python main.py -lr _VALUE_
 > python main.py -bs _VALUE_
 
-Il training è stato eseguito su google colab a [questo](https://colab.research.google.com/drive/1K72PBcrekap-IKuDJ0KztYB20N7uJQZH#scrollTo=9ZIH-5MeqEh4) link.
+Il training è stato eseguito su google colab.
 
-__Nel modello presente sul drive l'accuratezza è al 58.707% dopo 16 epoche, ma può raggiungere valori molto superiori se si hanno a disposizione i mezzi fisici.__
+__Nel modello presente sul drive l'accuratezza è al 66.425% dopo 50 epoche._
 
 Eseguendo il file fer_confusion_matrix.py è anche possibile visualizzare la matrice di confusione normalizzata, il file verrà salvato all'interno della cartella **FER2013_VGG19**.
 
