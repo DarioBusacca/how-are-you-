@@ -38,7 +38,7 @@ Il file da eseguire per fare il preprocessamento e iniziare il training dei mode
 
 Il training è stato eseguito su google colab.
 
-__Nel modello presente sul drive l'accuratezza è al 66.425% dopo 50 epoche._
+__Nel modello presente sul drive l'accuratezza è al 68.153% dopo 50 epoche._
 
 Eseguendo il file fer_confusion_matrix.py è anche possibile visualizzare la matrice di confusione normalizzata, il file verrà salvato all'interno della cartella **FER2013_VGG19**.
 
