@@ -82,7 +82,11 @@ cap = cv2.VideoCapture('video/NOMEFILE.mp4')
 getFirstFrame('video/NOMEFILE.mp4')
 getLastFrame('video/NOMEFILE.mp4')
 
-first_emotion = emotionDetection('first_frame.jpg')
+first_emotion = ''
+
+while(first_emotion == ''):
+    first_emotion = emotionDetection('first_frame.jpg')
+
 last_emotion = emotionDetection('last_frame.jpg')
 print(first_emotion)
 print(last_emotion)
