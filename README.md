@@ -14,7 +14,8 @@ Il file _run.py_ implementa il riconoscimento tramite una foto, mentre _face_det
 
 ## Link utili
 
-Drive contenente i modelli pre-allenati, il file fer2013.csv ed il file data.h5: [drive](https://drive.google.com/drive/folders/1Po7uqMJ4h6-bmLjkRgXph1rGs7-xzrLV)
+Drive contenente i modelli pre-allenati, il file fer2013.csv ed il file data.h5: [drive](https://drive.google.com/drive/folders/1Po7uqMJ4h6-bmLjkRgXph1rGs7-xzrLV).
+Il file _FER_training.ipynb_ è direttamente collegato a questa cartella drive.
 
 Link al dataset ufficiale di FER2013, fornito da kaggle: [dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 
